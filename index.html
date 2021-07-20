@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title> Percy Jackson Characters </title>
+    </head>
+<body>
+
+<img src = "https://i.pinimg.com/originals/b2/05/b3/b205b328f9046cf4b5ffa28b3cca19c2.jpg" 
+style="width: 30%;" id="charactersimage">
+
+<h4 id="charactername"> </h4>
+
+<button onclick="update();"> Next </button>
+
+</body>
+
+</html>
+
+<script>
+
+var images = 
+["https://i.pinimg.com/originals/b2/05/b3/b205b328f9046cf4b5ffa28b3cca19c2.jpg"
+"https://i.pinimg.com/originals/d6/7c/de/d67cde7e688f664409d9daf6060d8b0c.jpg",  
+"https://i.pinimg.com/originals/b9/fc/23/b9fc23a3cb856bd811416c011f7cf05c.png" , 
+"https://vignette.wikia.nocookie.net/vsbattles/images/6/68/Percy_Jackson_Render.png/revision/latest?cb=20170513234946"];
+
+var names = ["Percy Jackson Characters", "Annabeth Chase" , "Rachel Elizabeth Dare" , "Percy Jackson"];
+
+var i = 0;
+
+function update()
+{
+    i++; 
+    var number_of_characters = 3
+    if(i > number_of_characters ) 
+    {
+        i = 0;
+    }
+   var updatedImage = images[i];
+    var updatedName = names[i];
+    document.getElementById("charactersimage").src = updatedImage;
+    document.getElementById("charactername").innerHTML = updatedName; 
+}
+
+
+</script>
